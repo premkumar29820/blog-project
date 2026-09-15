@@ -28,6 +28,11 @@ const blogSchema = new mongoose.Schema({
 const Blog = mongoose.model('Blog', blogSchema);
 
 // Routes
+
+app.get("/", (req, res) => {
+  res.send("Blog backend API is running");
+});
+
 app.get('/api/blogs', async (req, res) => {
   try {
     const blogs = await Blog.find({});
@@ -75,7 +80,8 @@ app.post('/api/blogs', async (req, res) => {
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
-});
+}); 
+
 
 // Start server
 app.listen(10000, () => console.log('Server running on port 10000'));
