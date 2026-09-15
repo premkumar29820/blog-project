@@ -34,14 +34,19 @@ function Navbar() {
     
   return (
     <div className='site-nav'>
-        <Link className='brand-mark' to={"/home"}><span>P</span>Personal</Link>
+        <Link className='brand-mark' to={log ? "/home" : "/login"}><span>P</span>Personal</Link>
         <div className='nav-links'>
-            <Link className='nav-link' to={"/home"}>Home</Link>
-            <Link className='nav-link' to={"/blogs"}>Blogs</Link>
-            <Link className='nav-link'>About</Link>
-
             {
-              log? <button className='nav-action' onClick={logout}>Logout</button>: <button className='nav-action' onClick={()=>navigate("/login")}>Login</button>
+              log ? <>
+                <Link className='nav-link' to={"/home"}>Home</Link>
+                <Link className='nav-link' to={"/blogs"}>Blogs</Link>
+                <Link className='nav-link' to={"/about"}>About</Link>
+                <Link className='nav-link' to={"/contact"}>Contact</Link>
+                <button className='nav-action' onClick={logout}>Logout</button>
+              </> : <>
+                <button className='nav-action' onClick={()=>navigate("/login")}>Login</button>
+                <button className='nav-action' onClick={()=>navigate("/signup")}>Signup</button>
+              </>
             }
             
            

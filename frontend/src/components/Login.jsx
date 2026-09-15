@@ -19,7 +19,7 @@ function Login() {
 
         })
 
-    }, []);
+    }, [navigate]);
 
   
     const handleLogin = (e) => {
