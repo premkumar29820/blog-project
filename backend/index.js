@@ -78,4 +78,4 @@ app.post('/api/blogs', async (req, res) => {
 });
 
 // Start server
-app.listen(5000, () => console.log('Server running on port 5000'));
+app.listen(10000, () => console.log('Server running on port 10000'));
