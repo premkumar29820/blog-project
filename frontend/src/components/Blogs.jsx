@@ -4,7 +4,7 @@ import Footer from "./common/Footer";
 import auth from "../config/firebase";
 
 
-const API_BASE_URL ="http://localhost:10000";
+const API_BASE_URL ="https://blog-project-8lxs.onrender.com";
 
 const API = `${API_BASE_URL.replace(/\/$/, "")}/api`;
 
