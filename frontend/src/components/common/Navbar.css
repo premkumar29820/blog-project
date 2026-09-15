@@ -1,0 +1,81 @@
+.site-nav {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.brand-mark span {
+    display: grid;
+    place-items: center;
+    width: 2.15rem;
+    height: 2.15rem;
+    border-radius: 0.7rem;
+    background: var(--coral);
+    color: #fff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--sage-dark);
+}
+
+.nav-action {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink);
+    padding: 0.65rem 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav-action:hover {
+    border-color: var(--sage);
+    color: var(--sage-dark);
+}
+
+@media (max-width: 640px) {
+    .site-nav {
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.7rem 1rem;
+    }
+
+    .nav-action {
+        padding: 0.5rem 0.85rem;
+    }
+}
