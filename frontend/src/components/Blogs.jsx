@@ -346,4 +346,8 @@ function Blogs() {
   );
 }
 
+<<<<<<< HEAD
 export default Blogs;
+=======
+export default Blogs;
+>>>>>>> f417f929297d24362c38ec792fa7fc6d9f43f78f
